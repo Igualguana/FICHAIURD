@@ -40,24 +40,15 @@
                       </div>
                     </div>
         
+                          
+                   
                     <div class="col-12">
-                      <label for="username" class="form-label">Username</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text">@</span>
-                        <input type="text" class="form-control" id="username" placeholder="Username" required>
-                      <div class="invalid-feedback">
-                          Your username is required.
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="phone" class="form-control" id="phone" placeholder="7654456" required>
+                        <div class="invalid-feedback">
+                          Please enter your shipping address.
                         </div>
                       </div>
-                    </div>
-        
-                    <div class="col-12">
-                      <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                      <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                      <div class="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
-                      </div>
-                    </div>
         
                     <div class="col-12">
                       <label for="address" class="form-label">Address</label>
@@ -102,9 +93,21 @@
                       </div>
                     </div>
                   </div>
+
+
+                  <div class="col-12">
+                    <label for="Oracion" class="form-label">Pedido de Oración</label>
+                    <textarea type="text" class="form-control" id="Oracion" placeholder="1234 Main St" required></textarea>
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+                 
+
+                  
         
                   <hr class="my-4">
-        
+                  <label for="Oracion" class="form-label">¿Como conoció la Iglesia?</label>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="same-address">
                     <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
@@ -119,7 +122,7 @@
         
                   
         
-                  <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                  <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar formulario </button>
                 </form>
               </div>
             </div>
