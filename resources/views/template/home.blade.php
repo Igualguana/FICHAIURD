@@ -6,15 +6,19 @@
 <div class="container">
     <main>
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="resources/images/bootstrap-logo.svg" alt="" width="100" height="57">
+        <img class="d-block mx-auto mb-4" src="{{ asset("storage/logo2.png")}}" alt="" width="150" height="150">
+
+        
         <h2>IGLESIA UNIVERSAL DEl REINO DE DIOS </h2>
         <p class="lead">"Soy siervo del Señor, que me ha llamado para anunciar el Evangelio." (Romanos 1:1)</p>
+        <br>
+        <h3>Ficha de Miembro </h3>
       </div>
         
             <div class="row g-5">
              
               <div class="col-md-7 col-lg-12">
-                <h4 class="mb-3">Ficha de Miembro</h4>
+                <h4 class="mb-3"></h4>
                 <div class="py-5 text-center">
                 <div id="preview" class="thumbnail">
     
