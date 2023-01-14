@@ -8,6 +8,8 @@
      <!-- Bootstrap core CSS -->
      @vite(['resources/css/form-validation.css']);    
 @vite(['resources/css/bootstrap.min.css']);
+
+<!--@stack('ccs') -->
 <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
