@@ -1,112 +1,137 @@
 @extends('../layouts.frontend')
 
 @section('content')
-<main class="container">
-    <div class="p-4 p-md-5 mb-2 text-white rounded bg-dark">
-      <div class="col-md-15 px-0">
-                <form action="" method="post" class="form" name="ficha" enctype="multipart/form-data">
 
-            <h2 class="form_title">Ficha de Miembro </h2>
-            <p class=""> </p>
+
     
-            <div class="form_container">
-                <div class="form_group">
-                    <div id="preview" class="thumbnail">
-    
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzEiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg1LjUiIHk9IjkwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MTcxeDE4MDwvdGV4dD48L3N2Zz4="
-                            width="200" height="200" />
-    
-                    </div>
-                    <!--  <span class="alert alert-info" id="file-info">No hay archivo aún</span>-->
-    
-                    <form id="file-submit" enctype="multipart/form-data">
-                        <input id="file" name="file" type="file" />
-                    </form>
-                </div>
-                <div class="form_group">
-                    <label for="Name" class="form_label">Nombre</label> <br><br>
-                    <input type="text" id="Name" name="Name" class="form_input" placeholder="">
-                    <span class="form_line"></span>
-                </div>
-    
-    
-    
-    
-    
-                <div class="form_group">
-                    <label for="phone" class="form_label">Telefonos</label> <br><br>
-                    <input type="phone" id="phone" name="phone" class="form_input" placeholder="">
-                    <span class="form_line"></span>
-                </div>
-    
-    
-                <div class="form_group">
-                    <label for="Direccion" class="form_label">Direccion</label> <br><br>
-                    <input type="text" id="Direccion" name="Direccion" class="form_input" placeholder="">
-                    <span class="form_line"></span>
-                </div>
-    
-    
-    
-                <div class="form_group">
-                    <label for="Oracion" class="form_label">Pedido de Oración</label> <br><br>
-                    <input type="text" id="Oracion" name="Oracion" class="form_input" placeholder="">
-                    <span class="form_line"></span>
-                </div>
-    
-    
-    
-                <div class="form_group">
-                    <label for="Media" class="form_label" name="Media">¿Como conoció la Iglesia?</label>
-                    <br><br>
-                    <select id="Media" name="Media" class="form_input">
-                                 <option value="TV">TV</option>
-                                 <option value="Radio">Radio</option>
-                                 <option value="EVG">EVG</option>
-                                 <option value="otro">Otro</option>
-                             </select>
-                    <span class="form_line"></span>
-                </div>
-    
-    
-    
-    
-                {{  csrf_field()}}
-                <input type="submit" class="btn btn-primary" >
-            </div>
-        </form>
         
-    <script>
-            $('#preview').hover(
-                function() {
-                    $(this).find('a').fadeIn();
-                },
-                function() {
-                    $(this).find('a').fadeOut();
-                }
-            )
-            $('#file-select').on('click', function(e) {
-                e.preventDefault();
+            <div class="row g-5">
+             
+              <div class="col-md-7 col-lg-12">
+                <h4 class="mb-3">Billing address</h4>
+                <div class="py-5 text-center">
+                <div id="preview" class="thumbnail">
     
-                $('#file').click();
-            })
-    
-            $('input[type=file]').change(function() {
-                var file = (this.files[0].name).toString();
-                var reader = new FileReader();
-    
-                $('#file-info').text('');
-                $('#file-info').text(file);
-    
-                reader.onload = function(e) {
-                    $('#preview img').attr('src', e.target.result);
-                }
-    
-                reader.readAsDataURL(this.files[0]);
-            });
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-        </script>
-      </div>
-    </div>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzEiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg1LjUiIHk9IjkwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MTcxeDE4MDwvdGV4dD48L3N2Zz4="
+                        width="200" height="200" />
+
+                </div>
+                <!--  <span class="alert alert-info" id="file-info">No hay archivo aún</span>-->
+
+                <form id="file-submit" enctype="multipart/form-data">
+                    <input id="file" name="file" type="file" />
+                </form>
+            </div>
+                <form class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Valid first name is required.
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Valid last name is required.
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="username" class="form-label">Username</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                      <div class="invalid-feedback">
+                          Your username is required.
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                      <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                      <div class="invalid-feedback">
+                        Please enter your shipping address.
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                      <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                    </div>
+        
+                    <div class="col-md-5">
+                      <label for="country" class="form-label">Country</label>
+                      <select class="form-select" id="country" required>
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">State</label>
+                      <select class="form-select" id="state" required>
+                        <option value="">Choose...</option>
+                        <option>California</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+        
+                    <div class="col-md-3">
+                      <label for="zip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="zip" placeholder="" required>
+                      <div class="invalid-feedback">
+                        Zip code required.
+                      </div>
+                    </div>
+                  </div>
+        
+                  <hr class="my-4">
+        
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="same-address">
+                    <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                  </div>
+        
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <label class="form-check-label" for="save-info">Save this information for next time</label>
+                  </div>
+        
+                  <hr class="my-4">
+        
+                  
+        
+                  <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                </form>
+              </div>
+            </div>
+          </main>
+        
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2017–2021 Company Name</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+          </footer>
+        </div>
 @endsection
