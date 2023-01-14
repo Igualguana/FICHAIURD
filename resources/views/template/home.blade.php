@@ -3,12 +3,18 @@
 @section('content')
 
 
-    
+<div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="resources/images/bootstrap-logo.svg" alt="" width="100" height="57">
+        <h2>IGLESIA UNIVERSAL DEl REINO DE DIOS </h2>
+        <p class="lead">"Soy siervo del Señor, que me ha llamado para anunciar el Evangelio." (Romanos 1:1)</p>
+      </div>
         
             <div class="row g-5">
              
               <div class="col-md-7 col-lg-12">
-                <h4 class="mb-3">Billing address</h4>
+                <h4 class="mb-3">Ficha de Miembro</h4>
                 <div class="py-5 text-center">
                 <div id="preview" class="thumbnail">
     
@@ -58,10 +64,7 @@
                       </div>
                     </div>
         
-                    <div class="col-12">
-                      <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
-                      <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-                    </div>
+                  
         
                     <div class="col-md-5">
                       <label for="country" class="form-label">Country</label>
@@ -110,18 +113,23 @@
                   <label for="Oracion" class="form-label">¿Como conoció la Iglesia?</label>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="same-address">
-                    <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                    <label class="form-check-label" for="same-address">TV</label>
                   </div>
         
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="save-info">
-                    <label class="form-check-label" for="save-info">Save this information for next time</label>
+                    <label class="form-check-label" for="save-info">Radio</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <label class="form-check-label" for="save-info">EVG</label>
                   </div>
         
                   <hr class="my-4">
         
                   
-        
+                  {{  csrf_field()}}
                   <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar formulario </button>
                 </form>
               </div>
@@ -129,7 +137,7 @@
           </main>
         
           <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; 2017–2021 Company Name</p>
+            <p class="mb-1">&copy; 2023 Elaborado por <a href="#">Tecnosotf</a> </p>
             <ul class="list-inline">
               <li class="list-inline-item"><a href="#">Privacy</a></li>
               <li class="list-inline-item"><a href="#">Terms</a></li>
