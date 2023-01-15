@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\FomulariosController;
+use App\Http\Controllers\FormulariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,4 @@ Route::get('/', function () {
 });
 
 Route::get('/template', [TemplateController::class, 'template_inicio'])->name('template_inicio');
+Route::get('/formularios', [FormulariosController::class, 'formularios_inicio'])->name('formularios_inicio');

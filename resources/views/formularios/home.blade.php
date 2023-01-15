@@ -5,7 +5,6 @@
 
 <div class="container">
     <main>
-      <form action="{{ route('home_inicio_post') }}" method="post" class="form" name="ficha" enctype="multipart/form-data">-->
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="{{ asset("storage/logo2.png")}}" alt="" width="150" height="150">
 
@@ -37,7 +36,7 @@
                   <div class="row g-3">
                     <div class="col-sm-6">
                       <label for="firstName" class="form-label">First name</label>
-                      <input type="text" class="form-control" id="firstName" placeholder="" value="{{ old('firstName') }}" required>
+                      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
                       <div class="invalid-feedback">
                         Valid first name is required.
                       </div>
@@ -45,7 +44,7 @@
         
                     <div class="col-sm-6">
                       <label for="lastName" class="form-label">Last name</label>
-                      <input type="text" class="form-control" id="lastName" placeholder="" value="{{ old('lastName') }}" required>
+                      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                       <div class="invalid-feedback">
                         Valid last name is required.
                       </div>
@@ -55,7 +54,7 @@
                    
                     <div class="col-12">
                         <label for="phone" class="form-label">Phone</label>
-                        <input type="phone" class="form-control" id="phone" placeholder="7654456" value="{{ old('phone') }}" required>
+                        <input type="phone" class="form-control" id="phone" placeholder="7654456" required>
                         <div class="invalid-feedback">
                           Please enter your shipping address.
                         </div>
@@ -63,7 +62,7 @@
         
                     <div class="col-12">
                       <label for="address" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="address" placeholder="1234 Main St"  value="{{ old('address') }}"required>
+                      <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
                       <div class="invalid-feedback">
                         Please enter your shipping address.
                       </div>
@@ -73,7 +72,7 @@
         
                     <div class="col-md-5">
                       <label for="country" class="form-label">Country</label>
-                      <select class="form-select" id="country" value="{{ old('country') }}"required>
+                      <select class="form-select" id="country" required>
                         <option value="">Choose...</option>
                         <option>United States</option>
                       </select>
@@ -84,7 +83,7 @@
         
                     <div class="col-md-4">
                       <label for="state" class="form-label">State</label>
-                      <select class="form-select" id="state" value="{{ old('state') }}" required>
+                      <select class="form-select" id="state" required>
                         <option value="">Choose...</option>
                         <option>California</option>
                       </select>
@@ -95,7 +94,7 @@
         
                     <div class="col-md-3">
                       <label for="zip" class="form-label">Zip</label>
-                      <input type="text" class="form-control" id="zip" value="{{ old('zip') }}" placeholder="" required>
+                      <input type="text" class="form-control" id="zip" placeholder="" required>
                       <div class="invalid-feedback">
                         Zip code required.
                       </div>
@@ -105,7 +104,7 @@
 
                   <div class="col-12">
                     <label for="Oracion" class="form-label">Pedido de Oración</label>
-                    <textarea type="text" class="form-control" id="Oracion" placeholder="1234 Main St"  value="{{ old('Oracion') }}"required></textarea>
+                    <textarea type="text" class="form-control" id="Oracion" placeholder="1234 Main St" required></textarea>
                     <div class="invalid-feedback">
                       Please enter your shipping address.
                     </div>
@@ -117,18 +116,18 @@
                   <hr class="my-4">
                   <label for="Oracion" class="form-label">¿Como conoció la Iglesia?</label>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="save-TV" value="{{ old('save-TV') }}">
-                    <label class="form-check-label" for="save-TV">TV</label>
+                    <input type="checkbox" class="form-check-input" id="same-address">
+                    <label class="form-check-label" for="same-address">TV</label>
                   </div>
         
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="save-Radio" value="{{ old('save-Radio') }}">
-                    <label class="form-check-label" for="save-Radio">Radio</label>
+                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <label class="form-check-label" for="save-info">Radio</label>
                   </div>
 
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="save-EVG" value="{{ old('save-EVG') }}">
-                    <label class="form-check-label" for="save-EVG">EVG</label>
+                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <label class="form-check-label" for="save-info">EVG</label>
                   </div>
         
                   <hr class="my-4">
@@ -139,7 +138,6 @@
                 </form>
               </div>
             </div>
-          </form>
           </main>
         
           <footer class="my-5 pt-5 text-muted text-center text-small">
