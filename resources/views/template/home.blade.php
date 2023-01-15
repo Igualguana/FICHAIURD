@@ -5,7 +5,7 @@
 
 <div class="container">
     <main>
-      <form action="{{ route('home_inicio_post') }}" method="post" class="form" name="ficha" enctype="multipart/form-data">-->
+      <form action="" method="post" class="form" name="ficha" enctype="multipart/form-data">
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="{{ asset("storage/logo2.png")}}" alt="" width="150" height="150">
 

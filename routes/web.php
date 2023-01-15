@@ -22,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('/template', [TemplateController::class, 'template_inicio'])->name('template_inicio');
 Route::get('/formularios', [FormulariosController::class, 'formularios_inicio'])->name('formularios_inicio');
+Route::post('/formularios', [FormulariosController::class, 'formularios_post'])->name('formularios_post');
